@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><title>organizer</title>
+<head><title>Task Manager</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js" ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" />
@@ -8,10 +8,116 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/0.6/angular-material.min.js"></script>
 </head>
+<style>
+#outerDiv{
+  border-top: 1px solid #ffe6e6;
+  border-right: 1px solid #ffe6e6;
+  border-left: 1px solid #ffe6e6;
+  padding: 15px;
+  background-color: #f7f7f9;
+}
+#task{
+  height: 50px;
+  padding: 10px;
+}
+#date{
+  height: 50px;
+  padding: 10px;
+}
+#controlButtonsDiv{
+  border: 1px solid #ffe6e6;
+  padding: 15px;
+  background-color: #f7f7f9;
+  border-bottom: 1px solid #e1e1e8;
+
+}
+#addBtn{
+  color: white;
+}
+#expiredBtn{
+  color: white;
+}
+#restoreBtn{
+  color: white;
+}
+#clearBtn{
+  color: white;
+}
+#sortBtn{
+  color: white;
+}
+
+#addBtn:hover{
+  color: #4d0000;
+  border: 1px solid gray;
+}
+#expiredBtn:hover{
+  color: #4d0000;
+  border: 1px solid gray;
+}
+#restoreBtn:hover{
+  color: #4d0000;
+  border: 1px solid gray;
+}
+#clearBtn:hover{
+  color: #4d0000;
+  border: 1px solid gray;
+}
+#sortBtn:hover{
+  color: #4d0000;
+  border: 1px solid gray;
+}
+
+
+h4{
+  text-align: center;
+  margin: 25px;
+  color: #4d0000;
+}
+
+</style>
 <body>
 
-<h1>Start</h1>
-<button class="btn btn-primary">testing</button>
+<h4>Task Manager</h4>
+
+
+
+<div    class="container">
+    <div id="outerDiv" class="row">
+        <div  class="col-xs-12" >
+            <button id="addBtn" class="btn btn-default pull-right">Add </button>
+            <input id="task" type="text" placeholder="task">
+            <input id="date" type="date" placeholder="task">
+        </div>
+
+    </div>
+    <div id="controlButtonsDiv" class="row">
+        <div  class="col-xs-12" >
+          <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+            <div class="btn-group" role="group">
+              <button id="expiredBtn" type="button" class="btn btn-default">Expired</button>
+            </div>
+            <div class="btn-group" role="group">
+              <button id="restoreBtn" type="button" class="btn btn-default">Restore</button>
+            </div>
+            <div class="btn-group" role="group">
+              <button id="clearBtn" type="button" class="btn btn-default">Clear</button>
+            </div>
+            <div class="btn-group" role="group">
+              <button id="sortBtn" type="button" class="btn btn-default">Sort</button>
+            </div>
+          </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
 </body>
 
 
